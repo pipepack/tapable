@@ -27,3 +27,5 @@ rules:
   semi:
     - error
     - always
+  import/prefer-default-export: off
+  no-restricted-syntax: off
