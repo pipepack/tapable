@@ -1,11 +1,10 @@
-/**
- * @description - @coco-platform/init-cli generated template
- * @author - huang.jian <hjj491229492@hotmail.com>
- */
+// export everything
 
-/* eslint-disable import/prefer-default-export */
-export function sum(...variables: number[]): number {
-  const numbers = Array.from(variables);
+// class
+export { SyncHook } from './SyncHook';
+export { SyncBailHook } from './SyncBailHook';
+export { AsyncParallelHook } from './AsyncParallelHook';
+export { AsyncSeriesHook } from './AsyncSeriesHook';
 
-  return numbers.reduce((acc, curr) => acc + curr, 0);
-}
+// interface
+export { AsyncParallelHookOptions } from './tapable.interface';
