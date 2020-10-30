@@ -7,7 +7,6 @@
 
 yet, reimplement tapable with idea &#x27;simple is the best&#x27;.
 
-
 ## Usage
 
 ```shell
@@ -17,13 +16,6 @@ npm run compile:watch;
 # unit test with coverage
 npm run test;
 ```
-
-## Attention
-
-- tsc compiler compile without `polyfill`, mainly provide declare files
-- babel compiler compile `commonjs` style code
-- remember to change meta field in the `package.json`
-- compile script automatically run before publish, no need for manual compile
 
 # Licence
 
