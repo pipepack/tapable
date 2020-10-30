@@ -7,7 +7,7 @@ import { AsyncParallelHookOptions } from './tapable.interface';
 export class AsyncParallelHook<T> {
   private options: AsyncParallelHookOptions;
 
-  private handlers: Array<(param: T) => Promise<void>>;
+  private handlers: Array<(param: T) => Aigle<void>>;
 
   constructor(options: AsyncParallelHookOptions) {
     // limit concurrency
@@ -18,7 +18,7 @@ export class AsyncParallelHook<T> {
   }
 
   // extreme lite wrapper
-  tapPromise(handler: (param: T) => Promise<void>): void {
+  tapPromise(handler: (param: T) => Aigle<void>): void {
     this.handlers.push(handler);
   }
 

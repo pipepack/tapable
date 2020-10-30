@@ -2,15 +2,15 @@
 import { Aigle } from 'aigle';
 
 export class AsyncSeriesHook<T> {
-  private handlers: Array<(param: T) => Promise<void>>;
+  private handlers: Array<(param: T) => Aigle<void>>;
 
   constructor() {
     this.handlers = [];
   }
 
   // extreme lite wrapper
-  tapPromise(worker: (param: T) => Promise<void>): void {
-    this.handlers.push(worker);
+  tapPromise(handler: (param: T) => Aigle<void>): void {
+    this.handlers.push(handler);
   }
 
   // execute registered worker seriesly
